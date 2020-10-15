@@ -7,9 +7,16 @@ import io.mateu.mdd.shared.annotations.TextArea;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.servlet.http.HttpServletRequest;
+
 @MateuUI(path = "/form")
 @Getter@Setter
 public class SimpleForm {
+
+    public SimpleForm(HttpServletRequest request) {
+        email = request.getParameter("email");
+    }
+
 
     String email;
 

@@ -10,6 +10,9 @@ import org.example.domain.boundaries.common.entities.Person;
 @MateuUI(path = "")
 public class SimpleUI {
 
+    @Submenu
+    ConfigMenu config;
+
     @MenuOption
     Class persons = Person.class;
 
