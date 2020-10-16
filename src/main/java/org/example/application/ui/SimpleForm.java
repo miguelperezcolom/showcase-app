@@ -26,8 +26,9 @@ public class SimpleForm {
     String body;
 
     @Action(icon = VaadinIcons.ENVELOPE)
-    public void send() throws Throwable {
+    public String send() throws Throwable {
         // send the email
+        return "Email sent!";
     }
 
 }

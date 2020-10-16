@@ -4,6 +4,7 @@ import io.mateu.mdd.core.annotations.MateuUI;
 import io.mateu.mdd.shared.annotations.*;
 import io.mateu.security.Private;
 import org.example.application.ui.simpleUI.ConfigMenu;
+import org.example.application.ui.simpleUI.PersonsRpcView;
 import org.example.application.ui.wizards.WizardPage1;
 import org.example.domain.boundaries.common.entities.Person;
 
@@ -15,6 +16,15 @@ public class SimpleUI {
 
     @MenuOption
     Class persons = Person.class;
+
+    @MenuOption
+            @Columns("name,birthDate")
+            @FilterFields("name,nationality")
+            @EditableFields("name,financialAgent")
+    Class customizedPersons = Person.class;
+
+    @MenuOption
+    PersonsRpcView personsView;
 
     @MenuOption
     WizardPage1 wizard;
