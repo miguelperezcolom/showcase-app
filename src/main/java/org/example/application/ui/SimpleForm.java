@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 
 @MateuUI(path = "/form")
 @Getter@Setter
@@ -25,10 +26,19 @@ public class SimpleForm {
     @TextArea
     String body;
 
+    File attachment;
+
+    File attachment2;
+
     @Action(icon = VaadinIcons.ENVELOPE)
     public String send() throws Throwable {
         // send the email
         return "Email sent!";
+    }
+
+    @Action(icon = VaadinIcons.FILE)
+    public File seeAttachment() throws Throwable {
+        return attachment;
     }
 
 }
