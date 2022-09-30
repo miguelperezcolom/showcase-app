@@ -39,10 +39,6 @@ public class PersonsRpcView implements RpcCrudView<PersonsRpcView, PersonsRpcVie
         return JPAHelper.findAll(Person.class).size();
     }
 
-    @Override
-    public void search() {
-
-    }
 
     @Override
     public Object onEdit(Row row) throws Throwable {
